@@ -38,11 +38,18 @@ html {
   scroll-behavior: smooth;
   background-color: var(--bg-kraft);
   background-image: url('assets/cardboard.png');
-  background-size: 500px 500px;
-  background-repeat: repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: var(--ink-black);
   font-family: var(--font-mono);
   overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  html {
+    background-attachment: scroll; /* Smooth scrolling performance on mobile */
+  }
 }
 
 body {
