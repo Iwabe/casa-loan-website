@@ -15,30 +15,54 @@ document.addEventListener('DOMContentLoaded', () => {
   // 2. STICKY / SCROLLING RECEIPT HEADER EFFECT & FLOATING MENU TOGGLE
   const header = document.getElementById('receiptHeader');
   const toggleBtn = document.getElementById('navToggleBtn');
+  const closeBtn = document.getElementById('receiptCloseBtn');
   
-  // Track scroll position to hide/show navigation
+  // Track scroll position and window size to hide/show navigation
   function updateNavState() {
+    const isMobile = window.innerWidth <= 768;
     const isScrolled = window.scrollY > 150;
     const isOpen = header.classList.contains('open');
 
-    if (isScrolled) {
-      header.classList.add('scrolled');
+    if (isMobile) {
+      // On mobile:
+      // - The header (drawer) should only be open if the user opened it.
+      // - The toggle button should be visible if the menu is closed.
+      header.classList.remove('scrolled'); // No scroll styling on mobile
       if (isOpen) {
         header.classList.remove('hidden');
-        toggleBtn.classList.remove('visible'); // Hide toggle button when menu is open
+        header.classList.add('open');
+        toggleBtn.classList.remove('visible');
       } else {
         header.classList.add('hidden');
-        toggleBtn.classList.add('visible');  // Show toggle button when menu is closed
+        header.classList.remove('open');
+        toggleBtn.classList.add('visible'); // Always show button when closed on mobile
       }
     } else {
-      header.classList.remove('scrolled');
-      header.classList.remove('hidden');
-      header.classList.remove('open');
-      toggleBtn.classList.remove('visible'); // Hide button when near the top of the page
+      // On desktop:
+      // - Scroll-based visibility of header and toggle button.
+      if (isScrolled) {
+        header.classList.add('scrolled');
+        if (isOpen) {
+          header.classList.remove('hidden');
+          toggleBtn.classList.remove('visible');
+        } else {
+          header.classList.add('hidden');
+          toggleBtn.classList.add('visible');
+        }
+      } else {
+        header.classList.remove('scrolled');
+        header.classList.remove('hidden');
+        header.classList.remove('open'); // On desktop, close open menu when scrolling back to top
+        toggleBtn.classList.remove('visible');
+      }
     }
   }
 
   window.addEventListener('scroll', updateNavState);
+  window.addEventListener('resize', updateNavState);
+
+  // Initialize navigation state
+  updateNavState();
 
   // Toggle button click to open/close menu receipt
   toggleBtn.addEventListener('click', (e) => {
@@ -52,6 +76,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     updateNavState();
   });
+
+  // Close button click to close menu receipt
+  if (closeBtn) {
+    closeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      header.classList.remove('open');
+      header.classList.add('hidden');
+      updateNavState();
+    });
+  }
 
   // Close receipt if user clicks outside of it while open
   document.addEventListener('click', (e) => {

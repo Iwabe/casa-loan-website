@@ -368,6 +368,33 @@ body {
   z-index: 101;
 }
 
+/* Close button inside receipt header */
+.receipt-close-btn {
+  display: none; /* Hidden on desktop by default unless open */
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--stamp-red);
+  cursor: pointer;
+  z-index: 1010;
+  transition: transform 0.2s ease, color 0.2s ease;
+  font-family: var(--font-display);
+  line-height: 1;
+}
+
+.receipt-close-btn:hover {
+  transform: scale(1.15) rotate(90deg);
+  color: var(--ink-black);
+}
+
+.receipt-header.open .receipt-close-btn {
+  display: block; /* Show on desktop if open */
+}
+
 /* Hide state: slides up and rotates slightly out of viewport */
 .receipt-header.hidden {
   transform: translateY(-125%) rotate(-3deg) !important;
@@ -1272,14 +1299,22 @@ body {
 }
 
 @media (max-width: 768px) {
-  /* Move receipt header to static top layout or slide-in */
+  /* The receipt header on mobile acts as a full-width fixed drawer */
   .receipt-header {
-    position: relative;
+    position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     width: 100%;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    max-height: 100vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    z-index: 1000;
+    transform: translateY(-115%) rotate(0deg); /* Hidden by default */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    margin-bottom: 0;
+  }
+  .receipt-close-btn {
+    display: block; /* Always show inside the drawer on mobile */
   }
   .receipt-cut {
     display: none;
@@ -1287,25 +1322,19 @@ body {
   .receipt-tape {
     display: none;
   }
-  .receipt-header.scrolled {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    transform: none;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  .receipt-header.hidden {
+    transform: translateY(-115%) !important;
   }
-  .receipt-header.scrolled.hidden {
-    transform: translateY(-110%) !important;
-  }
-  .receipt-header.scrolled.open {
+  .receipt-header.open {
     transform: translateY(0) !important;
   }
   .nav-toggle-btn {
+    position: fixed;
     top: 15px;
     right: 20px;
     padding: 6px 12px;
     font-size: 1.1rem;
+    z-index: 999;
   }
   
   .hero-section {
