@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casa Loan | Comida Callejera Latina 🌮</title>
+  <meta name="description" content="Découvrez Casa Loan, le temple de la street food latino-américaine ! Tacos, empanadas croustillantes, churros dorés et cocktails festifs servis dans une ambiance brute, cartonnée et chaleureuse. ¡Buen provecho!">
+  
+  <!-- SEO Meta Tags -->
+  <meta property="og:title" content="Casa Loan | Comida Callejera Latina">
+  <meta property="og:description" content="Découvrez Casa Loan, le temple de la street food latino-américaine ! Tacos, empanadas croustillantes et ambiance festive.">
+  <meta property="og:image" content="assets/hero.png">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌮</text></svg>">
+
+  <!-- Google Fonts: Special Elite, Bebas Neue, Caveat, Space Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat+Brush&family=Caveat:wght@400;700&family=Gochi+Hand&family=Kalam:wght@700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Special+Elite&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Cardboard Texture Overlay -->
+  <div class="cardboard-grain"></div>
+
+  <!-- STICKY HEADER (Styled as a grocery/bar receipt ticket) -->
+  <header class="receipt-header" id="receiptHeader">
+    <div class="receipt-cut"></div>
+    <div class="receipt-content">
+      <div class="receipt-title">
+        <h1 class="logo-text">CASA LOAN</h1>
+        <p class="receipt-subtitle">Comida callejera</p>
+      </div>
+      <div class="receipt-meta">
+        <div>TKT #2026-06</div>
+        <div>STATION #1</div>
+        <div id="receipt-date">02/06/2026</div>
+      </div>
+      <div class="receipt-divider">==========================</div>
+      <nav class="receipt-nav">
+        <ul>
+          <li><a href="#hero" class="nav-link">CASA</a></li>
+          <li><a href="#concept" class="nav-link">EL CONCEPT</a></li>
+          <li><a href="#menu" class="nav-link">EL MENU</a></li>
+          <li><a href="#instagram" class="nav-link">LA VIBE</a></li>
+          <li><a href="#contact" class="nav-link">CONTACTO</a></li>
+        </ul>
+      </nav>
+      <div class="receipt-divider">==========================</div>
+      <div class="receipt-cta">
+        <a href="#contact" class="btn-receipt">RESERVER UNE TABLE 🍽️</a>
+      </div>
+      <div class="receipt-barcode">
+        <div class="barcode-line"></div>
+        <span class="barcode-num">C A S A L O A N * 2 0 2 6</span>
+      </div>
+    </div>
+    <div class="receipt-tape"></div>
+  </header>
+
+  <!-- Navigation Toggle Button (Pin/Ticket Tab style) -->
+  <button class="nav-toggle-btn" id="navToggleBtn">
+    📋 MENU
+  </button>
+
+  <!-- HERO SECTION (Styled as a cardboard package front) -->
+  <section class="hero-section" id="hero">
+    <div class="hero-container">
+      <div class="hero-cardboard-plate">
+        <!-- Stamp Mark -->
+        <div class="stamp-mark stamp-red">FRAGILE</div>
+        <div class="stamp-mark stamp-black stamp-rotated">100% LATINO</div>
+        
+        <div class="hero-content">
+          <span class="hero-tagline">BIENVENIDO A LA MEJOR COMIDA</span>
+          <h2 class="hero-logo-title">CASA LOAN</h2>
+          <div class="hero-logo-sub">Comida callejera</div>
+          <p class="hero-description">
+            De la street food latino-américaine brute, authentique et sans chichi. Des tacos débordants de saveurs, des empanadas frites à la minute, et du bon son latino.
+          </p>
+          
+          <div class="hero-actions">
+            <a href="#menu" class="btn-primary">VER EL MENU 🌶️</a>
+            <a href="#contact" class="btn-secondary">FIND US 📍</a>
+          </div>
+        </div>
+
+        <!-- Polaroid Hero Image with Tape -->
+        <div class="hero-image-wrapper">
+          <div class="tape tape-top-right"></div>
+          <div class="polaroid-photo">
+            <img src="assets/hero.png" alt="Tacos Casa Loan" class="food-img">
+            <div class="polaroid-caption">Fresh Tacos de la Casa - Jun 2026</div>
+          </div>
+          <!-- Sticker Badge -->
+          <div class="sticker-badge sticker-orange sticker-1">
+            <span>🌶️ RECETA ORIGINAL</span>
+          </div>
+          <div class="sticker-badge sticker-yellow sticker-2">
+            <span>¡SABROSO!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONCEPT SECTION (Styled as a handwritten notebook page scotched on cardboard) -->
+  <section class="concept-section" id="concept">
+    <div class="section-divider-tear"></div>
+    <div class="concept-container">
+      
+      <!-- Corrugated cardboard cardboard piece behind -->
+      <div class="concept-cardboard-backdrop">
+        
+        <!-- Notebook Page taped on top -->
+        <div class="notebook-page">
+          <div class="tape tape-notebook-top"></div>
+          <div class="tape tape-notebook-bottom-right"></div>
+          
+          <div class="notebook-lines">
+            <h3 class="notebook-title">La Filosofía de Loan ✍️</h3>
+            
+            <p class="notebook-text highlight-text">
+              "Chez Casa Loan, on ne fait pas de la haute gastronomie, on fait de la comida callejera. Celle qui se mange avec les doigts, celle qui coule sur les mains, celle qui donne envie de danser."
+            </p>
+            
+            <p class="notebook-text">
+              Inspiré par mes voyages de Mexico à Bogota, j'ai voulu ramener la vraie vibe de la rue latino-américaine. Pas de chichis, pas d'assiettes en porcelaine. Ici, on sert dans du carton recyclable, avec des ingrédients ultra-frais, des marinades maison secrètes de 24h, et des tortillas de maïs pressées à la main tous les matins.
+            </p>
+
+            <p class="notebook-text">
+              Chaque taco est un aller simple pour les marchés animés d'Amérique du Sud. Installez-vous, prenez une Margarita fraîche, et laissez-vous emporter par le rythme !
+            </p>
+
+            <div class="notebook-signature">
+              <span class="signature-label">Hecho con amor,</span>
+              <span class="signature-name">Loan 🌶️</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coffee cup stain + pepper details -->
+        <div class="coffee-stain"></div>
+        <div class="pepper-doodle">🌶️🌶️🌶️</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU SECTION (Styled as cardboard cards hanging/taped on wall) -->
+  <section class="menu-section" id="menu">
+    <div class="menu-container">
+      <div class="menu-header-box">
+        <div class="stamp-mark stamp-red stamp-menu">MENU DEL DIA</div>
+        <h3 class="menu-section-title">EL MENU 🗒️</h3>
+        <p class="menu-section-subtitle">Chaque plat est préparé à la commande, avec amour et piment.</p>
+        
+        <!-- Filters (Handwritten look tags) -->
+        <div class="menu-filters">
+          <button class="filter-btn active" data-filter="all">TODOS</button>
+          <button class="filter-btn" data-filter="tacos">TACOS</button>
+          <button class="filter-btn" data-filter="empanadas">EMPANADAS</button>
+          <button class="filter-btn" data-filter="sides">SIDES</button>
+          <button class="filter-btn" data-filter="bebidas">BEBIDAS</button>
+        </div>
+      </div>
+
+      <!-- Menu Grid -->
+      <div class="menu-grid">
+        
+        <!-- ITEM 1: Tacos de Birria -->
+        <div class="menu-item-card tacos" data-item="tacos">
+          <div class="tape tape-menu-item"></div>
+          <div class="menu-item-inner">
+            <span class="item-tag sticker-red">BEST-SELLER 🏆</span>
+            <div class="item-header">
+              <h4 class="item-title">Tacos de Birria</h4>
+              <span class="item-price">12,50€</span>
+            </div>
+            <p class="item-description">
+              3 tortillas de maïs garnies de boeuf mariné 24h et effiloché, fromage fondu, oignons et coriandre. Servis avec leur bouillon de cuisson chaud (consomé) pour tremper.
+            </p>
+            <div class="item-footer">
+              <span class="item-badge">🌶️ Moyen</span>
+              <span class="item-badge">Maïs 100%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 2: Tacos al Pastor -->
+        <div class="menu-item-card tacos" data-item="tacos">
+          <div class="tape tape-menu-item tape-rotated"></div>
+          <div class="menu-item-inner">
+            <div class="item-header">
+              <h4 class="item-title">Tacos al Pastor</h4>
+              <span class="item-price">11,00€</span>
+            </div>
+            <p class="item-description">
+              3 tortillas de maïs garnies de porc mariné au rocou et aux épices douces, rôti à la broche, coriandre fraîche, oignons et morceaux d'ananas frais caramélisés.
+            </p>
+            <div class="item-footer">
+              <span class="item-badge">Traditionnel</span>
+              <span class="item-badge">Sweet & Sour</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 3: Empanadas de Carne -->
+        <div class="menu-item-card empanadas" data-item="empanadas">
+          <div class="tape tape-menu-item"></div>
+          <div class="menu-item-inner">
+            <span class="item-tag sticker-yellow">CROUSTILLANT ⭐</span>
+            <div class="item-header">
+              <h4 class="item-title">Empanadas de Carne</h4>
+              <span class="item-price">8,00€</span>
+            </div>
+            <p class="item-description">
+              2 grands chaussons de maïs croustillants, farcis de boeuf haché épicé, pommes de terre et oignons, frits dorés. Servis avec notre sauce piquante aji verde maison.
+            </p>
+            <div class="item-footer">
+              <span class="item-badge">Sans Gluten</span>
+              <span class="item-badge">🌶️ Doux</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 4: Empanadas de Queso y Maiz -->
+        <div class="menu-item-card empanadas" data-item="empanadas">
+          <div class="tape tape-menu-item"></div>
+          <div class="menu-item-inner">
+            <div class="item-header">
+              <h4 class="item-title">Empanadas de Queso</h4>
+              <span class="item-price">7,50€</span>
+            </div>
+            <p class="item-description">
+              2 grands chaussons de maïs farcis de fromage fondant et maïs doux, frits à la minute. Servis avec une sauce coriandre-citron vert crémeuse.
+            </p>
+            <div class="item-footer">
+              <span class="item-badge">🌱 Veggie</span>
+              <span class="item-badge">Crémeux</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 5: Guacamole & Totopos -->
+        <div class="menu-item-card sides" data-item="sides">
+          <div class="tape tape-menu-item tape-rotated"></div>
+          <div class="menu-item-inner">
+            <div class="item-header">
+              <h4 class="item-title">Guacamole & Totopos</h4>
+              <span class="item-price">6,00€</span>
+            </div>
+            <p class="item-description">
+              Notre guacamole signature préparé à la minute (avocats frais, coriandre, tomates, oignon rouge et citron vert) avec nos totopos de maïs frits maison croustillants.
+            </p>
+            <div class="item-footer">
+              <span class="item-badge">🌱 Vegan</span>
+              <span class="item-badge">Frais</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 6: Churros de la Casa -->
+        <div class="menu-item-card sides" data-item="sides">
+          <div class="tape tape-menu-item"></div>
+          <div class="menu-item-inner">
+            <span class="item-tag sticker-red">SWEET 🍫</span>
+            <div class="item-header">
+              <h4 class="item-title">Churros Con Chocolate</h4>
+              <span class="item-price">5,50€</span>
+            </div>
+            <p class="item-description">
+              5 churros chauds et croustillants enrobés de sucre à la cannelle, servis avec un pot de chocolat noir fondu de Oaxaca pour faire trempette.
+            </p>
+            <div class="item-footer">
+              <span class="item-badge">Chaud & Sucré</span>
+              <span class="item-badge">Maison</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 7: Margarita Clasica -->
+        <div class="menu-item-card bebidas" data-item="bebidas">
+          <div class="tape tape-menu-item"></div>
+          <div class="menu-item-inner">
+            <span class="item-tag sticker-yellow">FIESTA 🍹</span>
+            <div class="item-header">
+              <h4 class="item-title">Margarita Clásica</h4>
+              <span class="item-price">8,00€</span>
+            </div>
+            <p class="item-description">
+              Tequila 100% Agave, Triple Sec, jus de citron vert frais pressé et sirop d'agave biologique. Servi dans un verre givré au sel de Camargue.
+            </p>
+            <div class="item-footer">
+              <span class="item-badge">Alcoolisé</span>
+              <span class="item-badge">Frais</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 8: Jarritos Variados -->
+        <div class="menu-item-card bebidas" data-item="bebidas">
+          <div class="tape tape-menu-item tape-rotated"></div>
+          <div class="menu-item-inner">
+            <div class="item-header">
+              <h4 class="item-title">Jarritos Mexicanos</h4>
+              <span class="item-price">4,00€</span>
+            </div>
+            <p class="item-description">
+              Soda mexicain traditionnel en bouteille de verre. Saveurs disponibles : Mandarine, Citron vert, ou Goyave. Rafraîchissant et fruité.
+            </p>
+            <div class="item-footer">
+              <span class="item-badge">Sans Alcool</span>
+              <span class="item-badge">Importé 🇲🇽</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Cardboard box outline footer note -->
+      <div class="menu-box-footer">
+        <p>📦 <span>Consigne Éco :</span> Tous nos contenants et emballages sont en carton kraft recyclé et compostable. La nature vous dit gracias !</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INSTAGRAM VIBE SECTION (Polaroids taped on corrugated cardboard background) -->
+  <section class="insta-section" id="instagram">
+    <div class="section-divider-tear border-top"></div>
+    <div class="insta-container">
+      <div class="insta-header-box">
+        <div class="insta-tag">@CASA.LOAN</div>
+        <h3 class="insta-title">¡SÍGUENOS EN INSTAGRAM!</h3>
+        <p class="insta-subtitle">Plongez dans notre quotidien. Identifiez-nous avec vos plus belles coulées de Birria ! #CasaLoan</p>
+      </div>
+
+      <!-- Polaroid Grid simulating the DA -->
+      <div class="polaroid-grid">
+        
+        <!-- Polaroid 1 -->
+        <div class="polaroid-wrapper rot-left">
+          <div class="tape tape-polaroid"></div>
+          <div class="polaroid-item">
+            <div class="polaroid-img-box">
+              <img src="assets/insta-1.png" alt="Birria Tacos en préparation">
+              <div class="polaroid-overlay">
+                <span class="hearts">❤️ 342</span>
+                <span class="comments">💬 28</span>
+              </div>
+            </div>
+            <div class="polaroid-text">Alerte Birria ! Fondant et croustillant 🤤 #birria #tacos</div>
+          </div>
+        </div>
+
+        <!-- Polaroid 2 -->
+        <div class="polaroid-wrapper rot-right">
+          <div class="tape tape-polaroid tape-angled"></div>
+          <div class="polaroid-item">
+            <div class="polaroid-img-box">
+              <img src="assets/insta-2.png" alt="Cocktails Margarita frais">
+              <div class="polaroid-overlay">
+                <span class="hearts">❤️ 219</span>
+                <span class="comments">💬 14</span>
+              </div>
+            </div>
+            <div class="polaroid-text">Margaritas glacées pour bien commencer la semaine 🍸 #fiesta</div>
+          </div>
+        </div>
+
+        <!-- Polaroid 3 -->
+        <div class="polaroid-wrapper rot-straight">
+          <div class="tape tape-polaroid"></div>
+          <div class="polaroid-item">
+            <div class="polaroid-img-box">
+              <img src="assets/insta-3.png" alt="Empanadas dorées">
+              <div class="polaroid-overlay">
+                <span class="hearts">❤️ 412</span>
+                <span class="comments">💬 33</span>
+              </div>
+            </div>
+            <div class="polaroid-text">¡Empanadas calientes! Dorées et faites main 🥟 #comidalatina</div>
+          </div>
+        </div>
+
+        <!-- Polaroid 4 -->
+        <div class="polaroid-wrapper rot-right">
+          <div class="tape tape-polaroid"></div>
+          <div class="polaroid-item">
+            <div class="polaroid-img-box">
+              <img src="assets/insta-4.png" alt="Churros croustillants">
+              <div class="polaroid-overlay">
+                <span class="hearts">❤️ 503</span>
+                <span class="comments">💬 49</span>
+              </div>
+            </div>
+            <div class="polaroid-text">Churros y Chocolate: le combo gagnant du goûter 🍫 #churros</div>
+          </div>
+        </div>
+
+        <!-- Polaroid 5 -->
+        <div class="polaroid-wrapper rot-left">
+          <div class="tape tape-polaroid tape-angled"></div>
+          <div class="polaroid-item">
+            <div class="polaroid-img-box">
+              <img src="assets/insta-5.png" alt="Enseigne lumineuse Amor y Tacos">
+              <div class="polaroid-overlay">
+                <span class="hearts">❤️ 682</span>
+                <span class="comments">💬 72</span>
+              </div>
+            </div>
+            <div class="polaroid-text">Parce que l'amour et les tacos, c'est la même chose ❤️🌮 #vibe</div>
+          </div>
+        </div>
+
+        <!-- Polaroid 6 -->
+        <div class="polaroid-wrapper rot-straight">
+          <div class="tape tape-polaroid"></div>
+          <div class="polaroid-item">
+            <div class="polaroid-img-box">
+              <img src="assets/insta-6.png" alt="Bouteilles de Jarritos dans la glace">
+              <div class="polaroid-overlay">
+                <span class="hearts">❤️ 188</span>
+                <span class="comments">💬 9</span>
+              </div>
+            </div>
+            <div class="polaroid-text">Gros stock de Jarritos frais en direct du Mexique 🇲🇽🥤 #jarritos</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="insta-action-btn">
+        <a href="https://www.instagram.com/casa.loan/?hl=fr" target="_blank" rel="noopener noreferrer" class="btn-insta">
+          VOIR LE VRAI INSTAGRAM 📱
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT & RESERVATION SECTION (Styled as a Postal Shipping Label / Cardboard Package Box) -->
+  <section class="contact-section" id="contact">
+    <div class="contact-container">
+      
+      <div class="postal-label-container">
+        
+        <!-- Postal Label Plate -->
+        <div class="postal-label">
+          <div class="postal-header">
+            <div class="postal-stamp">
+              <span class="stamp-country">CASA LOAN</span>
+              <span class="stamp-icon">🌮</span>
+              <span class="stamp-value">RESERVADO</span>
+            </div>
+            <div class="postal-logo">
+              <h3>RESERVAS</h3>
+              <p>TABLE RESERVATION & INQUIRIES</p>
+            </div>
+          </div>
+
+          <div class="postal-divider"></div>
+
+          <div class="postal-body">
+            <!-- Left Column: Info/Address -->
+            <div class="postal-info-col">
+              <div class="info-block">
+                <h5>📌 SENDER / DIRECCIÓN:</h5>
+                <p class="address-text">
+                  <strong>Casa Loan Restaurant</strong><br>
+                  12 Rue de la Comida Callejera<br>
+                  34000 Montpellier, France
+                </p>
+              </div>
+
+              <div class="info-block">
+                <h5>⏰ OPEN HOURS / HORARIO:</h5>
+                <ul class="hours-list">
+                  <li><strong>Mardi - Samedi :</strong> 12h00 - 14h30</li>
+                  <li><strong>Mardi - Samedi :</strong> 19h00 - 22h30</li>
+                  <li><strong>Dimanche & Lundi :</strong> Cerrado (Repos)</li>
+                </ul>
+              </div>
+
+              <div class="info-block">
+                <h5>📞 DIRECT LINE / TELEFONO:</h5>
+                <p class="tel-number">04 67 00 00 00</p>
+              </div>
+
+              <!-- Retro barcode for ticket look -->
+              <div class="shipping-barcode">
+                <div class="bar-pattern"></div>
+                <span>CODE: CL-34000-RESERVA</span>
+              </div>
+            </div>
+
+            <!-- Right Column: Interactive Form -->
+            <div class="postal-form-col">
+              <h5>✍️ DEMANDE DE RÉSERVATION / CONTACT :</h5>
+              
+              <form id="contactForm" class="label-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="name">Nombre / Nom :</label>
+                    <input type="text" id="name" name="name" placeholder="Juan Perez" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Correo / Email :</label>
+                    <input type="email" id="email" name="email" placeholder="juan@correo.com" required>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Mensaje / Votre demande (ou réservation) :</label>
+                  <textarea id="message" name="message" rows="4" placeholder="Hola Loan ! Je veux réserver une table pour 4 personnes ce soir à 20h..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-postal-send">
+                  RESERVER MA TABLE ⚡
+                </button>
+              </form>
+              <div id="formFeedback" class="form-feedback hidden">
+                ¡RESERVA ENVIADA! / Demande de réservation envoyée. Loan vous répond très vite pour confirmer ! 🍽️✨
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-retro">
+    <div class="footer-content">
+      <p>© 2026 Casa Loan - Restaurant Comida Callejera Latina.</p>
+      <p class="made-by">Handcrafted with raw cardboard 📦 & spice 🌶️ by Antigravity AI.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>

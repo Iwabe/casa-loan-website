@@ -1,0 +1,10 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs and temp files
+*.log
+.system_generated/
+temp/
+dist/
+build/
