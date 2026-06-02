@@ -38,8 +38,8 @@ html {
   scroll-behavior: smooth;
   background-color: var(--bg-kraft);
   background-image: url('assets/cardboard.png');
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size: 1100px; /* Échelle 1:1 avec les détails de la photo d'origine */
+  background-repeat: repeat;
   background-attachment: fixed;
   color: var(--ink-black);
   font-family: var(--font-mono);
